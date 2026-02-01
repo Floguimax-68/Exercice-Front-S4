@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+}
+
+body {
+    /* pour que le canvas n'ai pas de marge */
+    display: flex;
+    background-color: black;
+}
+
+#canvas-test{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
