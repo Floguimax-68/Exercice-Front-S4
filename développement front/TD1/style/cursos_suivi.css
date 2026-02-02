@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    background-color: black;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.particule {
+    position : absolute;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(177, 101, 177);
+    border-radius: 100%;
+    opacity: 0.45;
+}
