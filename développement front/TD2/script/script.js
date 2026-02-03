@@ -1,15 +1,37 @@
-let btn_affichage = document.querySelector(".btn-affichage");
-let 
-btn_affichage.addEventListener("click", getData);
 
-// Une autre manière d'attendre le retour de la réponse lors d'un fetch
-async function getData() {
-    let data = await fetch("cursor_suivi.html");
-    let contenu_curseur_html = await data.text();
-    document.querySelector(".contenu").innerHTML = contenu_curseur_html;
-    cursorSuivi();
+let etudiants = [];
+let partitions = [];
+
+go();
+
+async function go() {
+    partitions = await fetchData("data/partitions.json");
+    etudiants = await fetchData("data/etudiants.json");
+    etudiants = triEtudiant(etudiants);
+    afficherEtudiants(etudiants);
 }
 
-function supp_contenu(){
+async function fetchData(url) {
+    const reponse = await fetch(url);
+    const data = await reponse.json();
+    return data;
+}
 
+function triEtudiant(etudiants) {
+//tri etudiant par nom et prenom
+
+    return etudiants.sort((a, b) => {
+        let nomCompletA = a.nom_disp + a.prenom;
+        let nomCompletB = b.nom_disp + b.prenom;
+        return nomCompletA.localeCompare(nomCompletB);
+    });
+
+};
+
+function afficherEtudiants(etu) {
+let divEtudiant = document.querySelector(".etudiant");
+etu.forEach(Element => {
+    divEtudiant.innerHTML += `<p>Nom: ${Element.nom_disp}</p>
+                                  <p>Prénom: ${Element.prenom}</p>`
+      }); 
 }
