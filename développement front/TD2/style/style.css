@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    max-width: 100vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+}
+
+.affichage {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenu{
+display: flex;
+min-height: 400px;
+min-width: 600px;
+}
+
+.btn-affichage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    margin: 8px;
+    background-color: #444;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
