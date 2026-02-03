@@ -55,8 +55,9 @@ function template_affichage_etudiants(etudiant) {
     let div = document.createElement("div");
     div.className = "container-etu";
     div.innerHTML = `
-        <p>nom de l'étudiant: ${etudiant.nom_disp}</p>
-        <p>Prénom: ${etudiant.prenom}</p>
+        <p class="num-etu">numéro de l'étudiant: ${etudiant.etudid}</p>
+        <p class="nom-etu">nom de l'étudiant: ${etudiant.nom_disp}</p>
+        <p class="prenom-etu">Prénom: ${etudiant.prenom}</p>
     `;
     return div;
 }
