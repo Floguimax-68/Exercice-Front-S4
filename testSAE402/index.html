@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept — Clé & Porte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="preloader" aria-live="polite">
+        <div class="preloader-stage">
+            <div class="door-frame" aria-hidden="true">
+                <div class="door">
+                    <div class="keyhole"></div>
+                </div>
+            </div>
+            <div class="key" aria-hidden="true">
+                <div class="teeth"></div>
+            </div>
+            <div class="flash" aria-hidden="true"></div>
+            <p class="loading-text">Chargement — la clé trouve la serrure…</p>
+        </div>
+    </div>
+
+    <audio id="sound-insert" preload="auto" src="assets/insert.mp3"></audio>
+    <audio id="sound-turn" preload="auto" src="assets/turn.mp3"></audio>
+    <audio id="sound-open" preload="auto" src="assets/open.mp3"></audio>
+
+    <header class="hero" id="home">
+        <nav class="nav">
+            <div class="brand">Clé • Porte</div>
+            <div class="nav-links">
+                <a href="#concept">Concept</a>
+                <a href="#experience">Expérience</a>
+                <a href="#galerie">Galerie</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <div>
+                <p class="eyebrow">Design Interactif</p>
+                <h1>Une clé, une porte, un passage vers l’accueil.</h1>
+                <p class="lead">Une page concept immersive où la clé glisse dans la serrure, la porte s’ouvre, et l’univers s’illumine.</p>
+                <div class="cta-row">
+                    <a class="btn primary" href="#experience">Découvrir l’expérience</a>
+                    <a class="btn ghost" href="#galerie">Voir la galerie</a>
+                </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="portal">
+                    <div class="portal-glow"></div>
+                    <div class="portal-door">
+                        <div class="portal-key"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">Scroll</div>
+    </header>
+
+    <main>
+        <section class="section" id="concept">
+            <div class="section-header">
+                <h2>Le concept</h2>
+                <p>La clé symbolise l’accès, la porte incarne le passage. L’ensemble crée une introduction narrative à votre univers.</p>
+            </div>
+            <div class="cards">
+                <article class="card">
+                    <h3>Lumière cinématique</h3>
+                    <p>Des halos, des reflets et des gradients pour suggérer un espace vivant derrière la porte.</p>
+                </article>
+                <article class="card">
+                    <h3>Interaction fluide</h3>
+                    <p>Une animation de clé précise, accompagnée d’un son visuel et d’un mouvement de porte.</p>
+                </article>
+                <article class="card">
+                    <h3>Esthétique premium</h3>
+                    <p>Couleurs profondes, or lumineux et textures douces pour un rendu haut de gamme.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section highlight" id="experience">
+            <div class="split">
+                <div>
+                    <h2>L’expérience</h2>
+                    <p>La page s’ouvre comme un sas : la clé se met en mouvement, s’insère dans la serrure et déclenche l’ouverture.</p>
+                    <ul class="list">
+                        <li>Animation d’introduction synchronisée</li>
+                        <li>Transitions douces et immersives</li>
+                        <li>Univers visuel cohérent</li>
+                    </ul>
+                </div>
+                <div class="concept-art" aria-hidden="true">
+                    <div class="art-door"></div>
+                    <div class="art-light"></div>
+                    <div class="art-key"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="galerie">
+            <div class="section-header">
+                <h2>Galerie concept</h2>
+                <p>Des visuels stylisés pour imaginer l’univers derrière la porte.</p>
+            </div>
+            <div class="gallery">
+                <figure class="gallery-card">
+                    <div class="gallery-art aurora"></div>
+                    <figcaption>La lumière intérieure</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                    <div class="gallery-art horizon"></div>
+                    <figcaption>Le seuil infini</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                    <div class="gallery-art prism"></div>
+                    <figcaption>Les facettes de l’accueil</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="section" id="escape">
+            <div class="section-header">
+                <h2>Escape game en plein air</h2>
+                <p>50 concepts uniques, avec des niveaux, types et genres variés. Choisis ton aventure et inscris-toi.</p>
+            </div>
+            <div class="filters">
+                <button class="badge filter-btn is-active" data-filter="all">Tous</button>
+                <button class="badge filter-btn" data-filter="difficulty-facile">Facile</button>
+                <button class="badge filter-btn" data-filter="difficulty-intermediaire">Intermédiaire</button>
+                <button class="badge filter-btn" data-filter="difficulty-difficile">Difficile</button>
+                <button class="badge filter-btn" data-filter="difficulty-expert">Expert</button>
+            </div>
+            <div class="escape-grid" id="escape-grid"></div>
+        </section>
+
+        <section class="section highlight" id="inscription">
+            <div class="split">
+                <div>
+                    <h2>Inscription rapide</h2>
+                    <p>Choisis ton concept préféré, puis complète le formulaire pour réserver ta session.</p>
+                    <ul class="list">
+                        <li>Confirmation par email</li>
+                        <li>Créneaux flexibles</li>
+                        <li>Équipes de 2 à 8 joueurs</li>
+                    </ul>
+                </div>
+                <form class="form" id="escape-form">
+                    <div class="form-row">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" placeholder="Ex : Camille Dupont" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="exemple@mail.com" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="06 00 00 00 00" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="concept">Concept choisi</label>
+                        <input type="text" id="concept" name="concept" placeholder="Sélectionne un concept" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="players">Nombre de joueurs</label>
+                        <select id="players" name="players" required>
+                            <option value="2">2 joueurs</option>
+                            <option value="3">3 joueurs</option>
+                            <option value="4">4 joueurs</option>
+                            <option value="5">5 joueurs</option>
+                            <option value="6">6 joueurs</option>
+                            <option value="7">7 joueurs</option>
+                            <option value="8">8 joueurs</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="date">Date souhaitée</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <button class="btn primary" type="submit">S'inscrire</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer" id="contact">
+        <div>
+            <h3>Prêt à ouvrir votre univers ?</h3>
+            <p>Contactez-nous pour transformer votre page d’accueil en expérience immersive.</p>
+        </div>
+        <a class="btn primary" href="mailto:contact@cle-porte.fr">Nous contacter</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,54 +1,15 @@
-window.addEventListener('keydown', touche);
-window.addEventListener('keyup', stop);
-let lehmann = document.querySelector(".lehmann")
-let posiX = 0;
-let posiY = 0;
-let x = 0;
-let y = 0;
+let btn_affichage = document.querySelector(".btn-affichage");
+let 
+btn_affichage.addEventListener("click", getData);
 
-
-
-
-let interval1 = setInterval(bouge, 16);
-function touche(event) {
-    switch (event.key) {
-        case 'ArrowUp':
-            posiY = -10;
-            break;
-        case 'ArrowDown':
-            posiY = 10;
-            break;
-        case 'ArrowRight':
-            posiX = 10;
-            break;
-        case 'ArrowLeft':
-            posiX = -10;
-            break;
-    }
+// Une autre manière d'attendre le retour de la réponse lors d'un fetch
+async function getData() {
+    let data = await fetch("cursor_suivi.html");
+    let contenu_curseur_html = await data.text();
+    document.querySelector(".contenu").innerHTML = contenu_curseur_html;
+    cursorSuivi();
 }
 
-function stop(event) {
-    switch (event.key) {
-        case 'ArrowUp':
-            posiY = 0;
-            break;
-        case 'ArrowDown':
-            posiY = 0;
-            break;
-        case 'ArrowRight':
-            posiX = 0;
-            break;
-        case 'ArrowLeft':
-            posiX = 0;
-            break;
-    }
-}
-// function stop() {
-//     clearInterval(interval1); Buggez si plusieur touche appuyées
-// }
+function supp_contenu(){
 
-function bouge() {
-    x += posiX;
-    y += posiY;
-    lehmann.style.transform = `translate(${x}px, ${y}px)`;
 }

@@ -1,0 +1,18 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2244"/>
+      <stop offset="100%" stop-color="#0a0b14"/>
+    </linearGradient>
+    <linearGradient id="trail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f6c66b"/>
+      <stop offset="100%" stop-color="#6ce3ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" rx="40" fill="url(#mist)"/>
+  <rect y="420" width="800" height="180" fill="#0f1227"/>
+  <circle cx="140" cy="140" r="80" fill="#6ce3ff" fill-opacity="0.25"/>
+  <path d="M60 520 C220 430 380 450 740 340" stroke="url(#trail)" stroke-width="14" fill="none"/>
+  <rect x="260" y="260" width="280" height="180" rx="24" fill="#141730"/>
+  <rect x="300" y="300" width="200" height="120" rx="18" fill="#1f2447"/>
+</svg>
