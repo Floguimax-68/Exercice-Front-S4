@@ -35,10 +35,28 @@ function triEtudiant(etudiants) {
 
 
 /* function qui va selectionner la div étudiant et afficher leur nom et prenom par ordre alphabétique */
-function afficherEtudiants(etu) {
-    let divEtudiant = document.querySelector(".etudiant");
-    etu.forEach(Element => {
-        divEtudiant.innerHTML += `<p>Nom: ${Element.nom_disp}</p>
-                                  <p>Prénom: ${Element.prenom}</p>`
+// function afficherEtudiants(data_etudiants) {
+//     let divEtudiant = document.querySelector(".etudiant");
+//     data_etudiants.forEach(Element => {
+//         divEtudiant.innerHTML += `<p>Nom: ${Element.nom_disp}</p>
+//                                   <p>Prénom: ${Element.prenom}</p>`
+//     });
+// }
+
+function afficherEtudiants(data_etudiants) {
+    let main = document.querySelector("main");
+    data_etudiants.forEach(etudiants => {
+        main.appendChild(
+            template_affichage_etudiants(etudiants)
+        )
     });
+}
+function template_affichage_etudiants(etudiant) {
+    let div = document.createElement("div");
+    div.className = "container-etu";
+    div.innerHTML = `
+        <p>nom de l'étudiant: ${etudiant.nom_disp}</p>
+        <p>Prénom: ${etudiant.prenom}</p>
+    `;
+    return div;
 }
