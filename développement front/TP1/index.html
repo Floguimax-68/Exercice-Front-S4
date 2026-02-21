@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .zone1 {
+    	background-color: rgb(198, 129, 129);
+            min-height: 100vh;
+        }
+    </style>
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="zone1"></div>
+
+    <script>
+
+        /* Le SW en premier pour éviter les problèmes */
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
