@@ -1,15 +1,12 @@
-let btn_affichage = document.querySelector(".btn-affichage");
-let 
-btn_affichage.addEventListener("click", getData);
+const data_Cont = document.querySelector('.data-cont');
 
-// Une autre manière d'attendre le retour de la réponse lors d'un fetch
-async function getData() {
-    let data = await fetch("cursor_suivi.html");
-    let contenu_curseur_html = await data.text();
-    document.querySelector(".contenu").innerHTML = contenu_curseur_html;
-    cursorSuivi();
-}
+fetch('data.json')
+    .then(reponse => reponse.json())
+    .then(data => {
+        data.forEach(phrase => {
+            data_Cont.innerHTML += `<div>phrase dans le json : ${phrase}</div>`;
+        });
+    })
 
-function supp_contenu(){
 
-}
+    
